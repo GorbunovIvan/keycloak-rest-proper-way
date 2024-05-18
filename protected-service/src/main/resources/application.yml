@@ -4,3 +4,8 @@ server:
 spring:
   application:
     name: protected-service
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/keycloak-rest-proper-way
