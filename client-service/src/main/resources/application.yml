@@ -4,6 +4,17 @@ server:
 spring:
   application:
     name: client-service
+  security:
+    oauth2:
+      client:
+        registration:
+          keycloak:
+            client-id: protected-service
+            client-secret: s1Sw8hTMY2z0x17yeoX2ALLJs4LF0LxF
+            authorization-grant-type: client_credentials
+        provider:
+          keycloak:
+            token-uri: http://localhost:8080/realms/keycloak-rest-proper-way/protocol/openid-connect/token
 
 remote-service:
   name: protected-service
